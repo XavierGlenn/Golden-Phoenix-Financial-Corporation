@@ -1,47 +1,86 @@
 package com.pluralsight;
 
 import java.util.Scanner;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 
 //Task: Create a new Java project and a class for managing transactions.
 //Hint: Create a class named TransactionApp with a main method.
 //Consider: Think about what kind of data you'll be storing for each transaction (e.g., date, amount, vendor).
-
-public class TransactionApp {
-
-public static void main(String[] args) {
-
-// TODO: Implement the main logic here. }
 
 //Step 3: Display the Home Screen Menu
 //Task: Write a method to display a menu with options like "Add Deposit," "Make Payment," "View Ledger," etc.
 //Hint: Use System.out.println for each option and Scanner to read user input.
 //Question: How can you keep showing the menu until the user decides to exit?
 
-public static void displayMenu() {
+    public class main {
+        public static void main(String[] args) {
+            Scanner scanner = new Scanner(System.in);
+            int option = 0;
 
-System.out.println("D) Add Deposit");
-System.out.println("P) Make Payment");
-System.out.println("L) View Past Ledger Information");
-System.out.println("X) Exit the Application");
-System.out.print("Please enter the required letter: ");
+            // Get the current date and time
+            LocalDateTime currentDateTime = LocalDateTime.now();
+
+            // Define the format
+            DateTimeFormatter formatter = DateTimeFormatter.ofPattern("MM-dd-yyyy HH:mm:ss");
+
+            // Format the current date and time
+            String formattedDateTime = currentDateTime.format(formatter);
+
+            while (option != 4)
+            System.out.println("╔═════════════════════════════╗");
+            System.out.println("║* Welcome to Capstone Bank! *║");
+            System.out.println("╚═════════════════════════════╝");
+            System.out.println("*Today's Date and Time: " + formattedDateTime + "*");
+            System.out.println("═══════════════════════════════");
+
+            System.out.println("Please type in the letter that matches the option needed: ");
+            System.out.println("D) Add Deposit");
+            System.out.println("P) Make Payment");
+            System.out.println("L) View Past Ledger Information");
+            System.out.println("X) Exit the Application");
+            System.out.println("Please enter the required letter here: "); //Get the user's input here
+
+            String choice = "";
+            while (!choice.equalsIgnoreCase("") {
+
+                switch (option);
+                    case 1:
+                    System.out.println("Please enter in the amount of the deposit you'd like to make: ");
+                    int number1 = scanner.nextInt();
+                    break;
+
+                    case 2:
+                    System.out.println("Please enter in the amount of the payment you made: ");
+                    int number2 = scanner.nextInt();
+                    break;
+
+                    case 3:
+                    System.out.println("What information from the ledger would you like to view? ");
+                    String string1 = scanner.next();
+                    break;
+
+                    case 4:
+                    System.out.println("Thank you for banking with Capstone Bank, we greatly value your service!");
+                    break;
+
+                    default;
+                    System.out.println("Invalid input, please try again.");
+                    //Is this where the error goes? Labeling it as default feels weird. Maybe an error handler class is needed?
+
+                    choice = scanner.nextLine().trim();
+                    scanner.close();
+        }
+    }
 
 //Step 4: Implement Input Loop
 //Task: Set up a loop that keeps displaying the menu until the user selects "Exit."
 //Hint: Use a while loop to keep the program running.
 //Question: How will you handle different user choices, like adding a deposit or viewing the ledger?
 
-Scanner scanner = new Scanner(System.in);
-String choice = "";
-while (!choice.equals("X")) {
-
-displayMenu();
-choice = scanner.nextLine().trim();
-
-// Switch or if-else statement to handle choices.
-
 // TODO: Add logic for each menu option.
 
-//Step 5:Add Functionality for Deposits
+//Step 5: Add Functionality for Deposits
 //Task: Write a method to add a new deposit.
 //Hint: Prompt the user for information such as description, vendor, and amount.
 //Consider: What happens if the user enters a negative amount? How will you handle that?
