@@ -13,7 +13,7 @@ _______                                                                         
 /_____\                                                                                                                                          /_____\
                                                                                                               
 
-This is a basic application program was made to be user friendly and simple, all instructions are on the screen. 
+This is a basic application program was made to be user-friendly and simple, all instructions are on the screen. 
 The app is coded in Java 23 and Maven using a CLI format that demonstrates the ability to:
 - Add a sum to an existing sum,
 - Subtract a sum to an existing sum,
@@ -51,3 +51,27 @@ The app is coded in Java 23 and Maven using a CLI format that demonstrates the a
 ## Feedback and Support Inquiry:
 
 If you have any feedback, please reach out to me at xglenn@appdev.yearup.org
+
+              (                           )
+        ) )( (                           ( ) )( (
+      ( ( ( )  ) )                     ( (   (  ) )(
+     ) )     ,,\\\                     ///,,       ) (
+    (  ((    (\\\\//                     \\////)      )
+     ) )    (-(__//                       \\__)-)     (
+   (((   ((-(__||                         ||__)-))    ) )
+   ) )   ((-(-(_||           ```\__        ||_)-)-))   ((
+  ((   ((-(-(/(/\\        ''; 9.- `      //\)\)-)-))    )
+   )   (-(-(/(/(/\\      '';;;;-\~      //\)\)\)-)-)   (   
+   (   ((-(-(/(/(/\======,:;:;:;:,======/\)\)\)-)-))   )
+    )  '(((-(/(/(/(//////:%%%%%%%:\\\\\\)\)\)\)-)))`  ( (
+   ((   '((-(/(/(/('uuuu:WWWWWWWWW:uuuu`)\)\)\)-))`    )
+    ))  '((-(/(/(/('|||:wwwwwwwww:|||')\)\)\)-))`    ((
+     ((   '((((/(/('uuu:WWWWWWWWW:uuu`)\)\))))`     ))
+        ))   '':::UUUUUU:wwwwwwwww:UUUUUU:::``     ((   
+          ((      '''''''\uuuuuuuu/``````         ))
+           ))            `JJJJJJJJJ`           ((
+           ((            LLLLLLLLLLL         ))
+             ))         ///|||||||\\\       ((
+               ))      (/(/(/(^)\)\)\)       ((
+                ((                           ))
+                  )  ( )( ))( ( ( ) )( ) (()(

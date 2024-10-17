@@ -4,7 +4,6 @@ import java.io.*;
 import java.util.*;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
-//file writer, file reader add, split, convert. if split -> make add .object with stored info <- arraylist?, reference another constructor class.
 
 public void main(String[] args) {
 
@@ -15,15 +14,18 @@ public void main(String[] args) {
 
             String filePath = "CapstoneBankBanner.txt";
 
+            //File IO for banner
             try (BufferedReader reader = new BufferedReader(new FileReader("C:/Users/Student/OneDrive - Year Up- BOS/Desktop/Year Up Courses/PluralSight/Year Up United Projects/LearnToCode_Capstones/CapstoneBankBanner.txt"))) {
                 String line; }
             catch (IOException e) {
                 throw new RuntimeException(e); }
 
+                //Date and time config
                 LocalDateTime currentDateTime = LocalDateTime.now();
                 DateTimeFormatter formatter = DateTimeFormatter.ofPattern("MM-dd-yyyy HH:mm:ss");
                 String formattedDateTime = currentDateTime.format(formatter);
 
+                //Menu starts here!
                 Scanner scanner = new Scanner(System.in);
                 System.out.println("Today's Date and Time: " + formattedDateTime);
 
@@ -38,13 +40,16 @@ public void main(String[] args) {
 
                 System.out.println("══════════════════════════════════════════════════════════════");
 
-                while(nextScreen); {
-                    char option = scanner.nextLine().toUpperCase().charAt(0);
+                //booleans here, only because I really like them. Boolean is a cool word.
+                boolean newDeposit;
+                boolean newPayment;
+                boolean ledgerScreen;
 
-                    boolean nextScreen;
-                    boolean newDeposit;
-                    boolean newPayment;
-                    boolean ledgerScreen;
+                //Scanner input, as I forgot it yesterday.
+
+                //Initializing menu loop...
+                while(nextScreen) {
+                    char option = scanner.nextLine().toUpperCase().charAt(0);
 
                     switch (option) {
                         case 'D': //Deposit Info
@@ -71,14 +76,14 @@ public void main(String[] args) {
                         default: //Error Message
                             System.out.println("Error: Incorrect input. Please try again.");
                             nextScreen = true;
-                            break;
+                            break; }
+
+                        //I forget to do this step constantly so here it is:
+                        scanner.close();
                     }
                 }
             }
         }
-    }
-
-//Close your scanner somewhere.
 
 //https://skills4ittraining.sharepoint.com/:o:/r/sites/Opdrachtgevers/_layouts/15/Doc.aspx?sourcedoc=%7B901a5ac1-3af7-4752-9d89-980ae31fd3d1%7D&action=default&CID=0afe8e77-bd91-4fe2-ad21-b91d27efc074&_SRM=0%3AG%3A298
 //Collections.sort(transactions, Comparator.comparing(Transaction::getDate));
@@ -94,6 +99,6 @@ public void main(String[] args) {
 //Your project must also meet the following requirements:
 //It must contain an informative README file that:
 //Describes your project
-//Includes images ofyour application screens
+//Includes images of your application screens
 //Describes/shows one interesting piece of code from your project
 //Commit and push one last time
