@@ -1,2 +1,1 @@
-# CapstoneBank
-Capstone 1: Banking Application CLI
+(Open master. Not sure why, but it uploads there instead of main.)
