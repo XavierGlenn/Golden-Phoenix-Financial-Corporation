@@ -41,6 +41,7 @@ public class mainCLI {
                     System.out.println("D) Add Deposit");
                     System.out.println("P) Make Payment");
                     System.out.println("L) View Past Ledger Information");
+                    System.out.println("R) View Past Report Information");
                     System.out.println("X) Exit the Application");
                     System.out.println("Please enter the required letter here: ");
                     System.out.println("══════════════════════════════════════════════════════════════");
@@ -50,6 +51,7 @@ public class mainCLI {
                     boolean newDeposit;
                     boolean newPayment;
                     boolean ledgerScreen;
+                    boolean reportsScreen;
                     boolean endingScreen;
 
                     //Initializing menu loop...
@@ -61,6 +63,7 @@ public class mainCLI {
                             newPayment = false;
                             ledgerScreen = false;
                             endingScreen = false;
+                            reportsScreen = false;
                             newDeposit = true;
 
                             //Make the variables to ask for here:
@@ -91,6 +94,7 @@ public class mainCLI {
                             homeScreen = false;
                             ledgerScreen = false;
                             endingScreen = false;
+                            reportsScreen = false;
                             newDeposit = false;
                             newPayment = true;
 
@@ -102,13 +106,13 @@ public class mainCLI {
                             String type2 = ""; //Are you getting paid or paying someone else?
                             double amount2 = 0; //Amount that you're receiving or paying
 
-                            System.out.println("Please enter in the description of your transaction: ");
+                            System.out.println("Please enter in the description of the payment: ");
                             description2 = scanner.nextLine();
 
-                            System.out.println("Please enter in the name or business that you received the deposit from: ");
+                            System.out.println("Please enter in the name or business the payment was sent to: ");
                             vendor2 = scanner.nextLine();
 
-                            System.out.println("Please enter the amount of the deposit you would like to make: ");
+                            System.out.println("Please enter the amount of the payment: ");
                             amount2 = scanner.nextDouble();
                             scanner.nextLine();
 
@@ -121,29 +125,36 @@ public class mainCLI {
 
                             homeScreen = false;
                             endingScreen = false;
+                            reportsScreen = false;
                             newDeposit = false;
                             newPayment = false;
                             ledgerScreen = true;
 
-                            //Make the variables to ask for here:
-                            String date = ""; //Current date
-                            String time = ""; //Current time
-                            String description = ""; //Description of item, like 'vacuum cleaner'
-                            String vendor = ""; //Who paid you/who did you pay?
-                            String type = ""; //Are you getting paid or paying someone else?
-                            double amount = 0; //Amount that you're receiving or paying
+                            System.out.println("Would you like to view ledgers sorted by:");
+                            System.out.println("A) All - Displays all ledgers currently available to access.");
+                            System.out.println("D) Only the currently available deposits.");
+                            System.out.println("P) Only the currently available payments.");
+                            System.out.println("Please enter the letter of your desired search:");
+                            break;
+                        }
 
-                            System.out.println("Please enter in the description of your transaction: ");
-                            description = scanner.nextLine();
+                        case 'R': {
 
-                            System.out.println("Please enter in the name or business that you received the deposit from: ");
-                            vendor = scanner.nextLine();
+                            homeScreen = false;
+                            endingScreen = false;
+                            newDeposit = false;
+                            newPayment = false;
+                            ledgerScreen = false;
+                            reportsScreen = true;
 
-                            System.out.println("Please enter the amount of the deposit you would like to make: ");
-                            amount = scanner.nextDouble();
-                            scanner.nextLine();
-
-                            System.out.println("Last Transaction Input Recorded: " + description + date + time + vendor + amount);
+                            System.out.println("Would you like to view reports sorted by:");
+                            System.out.println("Transactions Listed by Month to Date");
+                            System.out.println("Transactions From Previous Month");
+                            System.out.println("Transactions From Previous Year to Date");
+                            System.out.println("Transactions From Previous Year");
+                            System.out.println("Transactions From A Specific Vendor");
+                            System.out.println("0) Go to Previous Page");
+                            System.out.println("0) Go to Home Page");
                             break;
                         }
 
@@ -154,9 +165,10 @@ public class mainCLI {
                             newDeposit = false;
                             newPayment = false;
                             ledgerScreen = false;
+                            reportsScreen = true;
                             endingScreen = true;
 
-                            System.out.println("Thank you, and have a wonderful day!");
+                            System.out.println("Thank you for your patronage, have a wonderful day!");
                             System.out.println("Golden Phoenix Financial Corporation: Blaze a path to better finances.");
                             break;
 
@@ -169,9 +181,6 @@ public class mainCLI {
     }
 }
 
-//https://skills4ittraining.sharepoint.com/:o:/r/sites/Opdrachtgevers/_layouts/15/Doc.aspx?sourcedoc=%7B901a5ac1-3af7-4752-9d89-980ae31fd3d1%7D&action=default&CID=0afe8e77-bd91-4fe2-ad21-b91d27efc074&_SRM=0%3AG%3A298
-//Collections.sort(transactions, Comparator.comparing(Transaction::getDate));
-
 //Step 13: Validate User Input
 //Task: Ensure that user input is validated throughout the application. Check for valid amounts, dates, and other data.
 //Consider: How will you handle input errors gracefully without crashing the program? What kind of error messages would be helpful to users?
@@ -183,6 +192,6 @@ public class mainCLI {
 //Your project must also meet the following requirements:
 //It must contain an informative README file that:
 //Describes your project
-//Includes images of your application screens
+//Includes images of your application screens AND PUT IT IN THE README TOO
 //Describes/shows one interesting piece of code from your project
 //Commit and push one last time
