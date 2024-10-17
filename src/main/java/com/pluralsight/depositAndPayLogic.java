@@ -1,8 +1,65 @@
 package com.pluralsight;
 
-/*file writer, file reader add, split, convert. if split -> make add .object with stored info <- arraylist?, reference another constructor class.
+import java.time.LocalDate;
+import java.time.LocalTime;
+import java.util.Scanner;
 
-    public static class depositpaylogistics(String date, String time, String description, String vendor, String type, double amount) {
+public class TransactionHandler {
+
+    //Let's start with the deposit stuff.
+    public static transaction addDeposit() {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("Enter the description of the transaction: ");
+        String description = scanner.nextLine();
+
+        System.out.println("Enter the vendor's business name: ");
+        String vendor = scanner.nextLine();
+
+        double amount = getValidAmount(scanner, "Enter the deposit amount:");
+
+        transaction deposit = new transaction(LocalDate.now(), LocalTime.now(), amount);
+        return deposit;
+        }
+
+        //Now for the validation. How validating.
+    private static double getValidAmount(Scanner scanner, String prompt) {
+        double amount = -1;
+        while (amount <= 0) {
+            System.out.println(prompt);
+            if (scanner.hasNextDouble()) {
+                amount = scanner.nextDouble();
+                if (amount <= 0) {
+                    System.out.println("Amount must be positive."); {
+                     } else {
+                        System.out.println("Invalid input. Please enter a valid number.");
+                        scanner.next();
+                    }
+                } return amount;
+            }
+        }
+    }
+}
+
+    public static Transaction addPayment() {
+    Scanner scanner = new Scanner(System.in);
+
+    System.out.println("Enter description: ");
+    String description = scanner.nextLine();
+
+    System.out.println("Enter vendor: ");
+    String vendor = scanner.nextLine();
+
+    double amount = getValidAmount(scanner, "Enter payment amount (positive value): ");
+
+    //now to bring it all together!
+    Transaction payment = new Transaction(LocalDate.now()), LocalTime.now(), -amount);
+    System.out.println("Payment added successfully!");
+
+    return payment;
+    }
+
+    /*public static class depositpaylogistics(String date, String time, String description, String vendor, String type, double amount) {
         public void main() {
                 this.date = date;
                 this.time = time;

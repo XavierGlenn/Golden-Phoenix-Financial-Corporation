@@ -8,6 +8,8 @@ import java.time.LocalTime;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Comparator;
+import java.util.Collections;
 
 //make the transaction variable and document it'll read from.
 public class transaction {
@@ -36,6 +38,7 @@ public class transaction {
             public static void list(transaction) readTransactionsInCSV(String filename) {
                 list(transaction) ArrayList<Object> transactions = new ArrayList<>();
 
+                //try-catch with buffer reader again:
                 try BufferedReader reader = new BufferedReader(new FileReader(filename)) {
                     String line;
                     while ((line = reader.readLine()) != null) {
@@ -48,10 +51,8 @@ public class transaction {
                 } catch (IOException e) {
                     System.out.println("An error occurred while trying to access and read this file. Please try again.");
                     e.printStackTrace();
-                    return transactions;
-                }
-            }
-        }
+                    return transactions; }
+
 
         class csvWriting {
 
@@ -61,20 +62,27 @@ public class transaction {
                         writer.write(transaction.toString() + "\n"); }
                     } catch (IOException e) {
                     System.out.println("An error occurred. Please try again.");
-                    e.printStackTrace();
-                }
-            }
-        }
-    }
-}
+                    e.printStackTrace(); }
 
+                Transaction deposit = TransactionHandler.addDeposit();
+                transaction.add(deposit);
+
+                Transaction payment = TransactionHandler.addPayment();
+                transaction.add(payment);
+
+                csvWriting.writetTransactionsInCSV(transactions, "transactions.csv");
+
+                //have to make sure we can actually see the thing now.
 public class displayingLedger {
     public static void displayTransactions(List<Transaction> transactions) {
         for (Transaction transaction = transactions) {
-            System.out.println("Date: " + transactions.getDate() + ", Time: " + transactions.getTime() + ", in the amount of: " + transaction.getAmount());
-        }
-    }
-}
+            System.out.println("Date: " + transactions.getDate() + ", Time: " + transactions.getTime() + ", in the amount of: " + transaction.getAmount()); }
+
+
+public class sortingTransactions {
+        //I don't like this code. I get it, I get why it works, but I don't like it. It unsettles me. It's intimidating.
+        public static void sortingTransactionsByDate(List(transaction) transactions) {
+            Collections.sort(transactions, Comparator.comparing(transaction: getDate)); }
 
 
 //if I have time:
