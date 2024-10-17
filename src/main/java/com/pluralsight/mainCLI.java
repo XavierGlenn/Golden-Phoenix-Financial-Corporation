@@ -32,26 +32,27 @@ public class mainCLI {
 
                 //Menu starts here!
                 Scanner scanner = new Scanner(System.in);
-                System.out.println("Today's Date and Time: " + formattedDateTime);
+                char option;
 
-                System.out.println("══════════════════════════════════════════════════════════════");
-                System.out.println("Please type in the letter that matches the option needed: ");
-                System.out.println("D) Add Deposit");
-                System.out.println("P) Make Payment");
-                System.out.println("L) View Past Ledger Information");
-                System.out.println("X) Exit the Application");
-                System.out.println("Please enter the required letter here: ");
-                System.out.println("══════════════════════════════════════════════════════════════");
+                do {
+                    System.out.println("Today's Date and Time: " + formattedDateTime);
+                    System.out.println("══════════════════════════════════════════════════════════════");
+                    System.out.println("Please type in the letter that matches the option needed: ");
+                    System.out.println("D) Add Deposit");
+                    System.out.println("P) Make Payment");
+                    System.out.println("L) View Past Ledger Information");
+                    System.out.println("X) Exit the Application");
+                    System.out.println("Please enter the required letter here: ");
+                    System.out.println("══════════════════════════════════════════════════════════════");
+                    option = scanner.nextLine().toUpperCase().charAt(0);
 
-                boolean homeScreen;
-                boolean newDeposit;
-                boolean newPayment;
-                boolean ledgerScreen;
-                boolean endingScreen;
+                    boolean homeScreen;
+                    boolean newDeposit;
+                    boolean newPayment;
+                    boolean ledgerScreen;
+                    boolean endingScreen;
 
-                //Initializing menu loop...
-
-                while (char option = scanner.nextLine().toUpperCase().charAt(0);
+                    //Initializing menu loop...
 
                     switch (option) {
                         case 'D': {
@@ -81,7 +82,8 @@ public class mainCLI {
                             scanner.nextLine();
 
                             System.out.println("Last Transaction Input Recorded: " + description1 + date1 + time1 + vendor1 + amount1);
-                            break; }
+                            break;
+                        }
 
                         //Payment Info
                         case 'P': {
@@ -111,7 +113,8 @@ public class mainCLI {
                             scanner.nextLine();
 
                             System.out.println("Last Transaction Input Recorded: " + description2 + date2 + time2 + vendor2 + amount2);
-                            break; }
+                            break;
+                        }
 
                         //Ledger Screen
                         case 'L': {
@@ -141,7 +144,8 @@ public class mainCLI {
                             scanner.nextLine();
 
                             System.out.println("Last Transaction Input Recorded: " + description + date + time + vendor + amount);
-                            break; }
+                            break;
+                        }
 
                         //Ending Screen
                         case 'X': {
@@ -154,13 +158,16 @@ public class mainCLI {
 
                             System.out.println("Thank you, and have a wonderful day!");
                             System.out.println("Golden Phoenix Financial Corporation: Blaze a path to better finances.");
-                            break; }
+                            break;
+
                         }
                     }
-                }
+                } while (option != 'X');
+                scanner.close();
             }
         }
-
+    }
+}
 
 //https://skills4ittraining.sharepoint.com/:o:/r/sites/Opdrachtgevers/_layouts/15/Doc.aspx?sourcedoc=%7B901a5ac1-3af7-4752-9d89-980ae31fd3d1%7D&action=default&CID=0afe8e77-bd91-4fe2-ad21-b91d27efc074&_SRM=0%3AG%3A298
 //Collections.sort(transactions, Comparator.comparing(Transaction::getDate));
