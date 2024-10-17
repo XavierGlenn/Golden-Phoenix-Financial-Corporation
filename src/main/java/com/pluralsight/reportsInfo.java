@@ -1,11 +1,4 @@
-package com.pluralsight;
-
-public class reportsInfo {
-
-package com.pluralsight;
-
-    public class reportInfo {
-    }
+public void main() {
 
 //R) Reports - A new screen that allows the user to run pre-defined reports or to run a custom search
 //1) Month To Date
@@ -22,8 +15,6 @@ package com.pluralsight;
 //Consider: How will you filter transactions to include only those within a certain date range?
 //Example Guidance: Think about how to create a method that accepts a date range and returns only transactions within that range.
 
-    public static void generateReport (/* parameters */) {
-
 // Filter transactions based on the selected report type.
 
 // TODO: Display only the relevant transactions.
@@ -33,8 +24,6 @@ package com.pluralsight;
 //Task: Write a method that allows users to search for transactions by vendor.
 //Hint: Use a loop to find transactions that match the user's input for the vendor name. How can you make the search case-insensitive?
 //Example Guidance: Think about using String methods that can help match user input to vendor names.
-
-        public static void searchByVendor () {
 
 // Loop through transactions.
 // Check if the vendor matches the input.

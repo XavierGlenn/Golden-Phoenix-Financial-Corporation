@@ -1,22 +1,11 @@
-package com.pluralsight;
-
 import java.util.List;
 import java.util.Scanner;
 
-public class ledgerInfo {
-    public void main() {
 
         //Ledger - All entries should show the newest entries first:
         //A) All - Display all entries
         //D) Deposits - Display only the entries that are deposits into the account
         //P) Payments - Display only the negative entries (or payments)
-
-        System.out.println("What from the ledger would you like to view? ");
-        Scanner scanner = new Scanner(System.in);
-        String ledgerInfo = scanner.next();
-        mainCLI.nextScreen = false;
-        mainCLI.ledgerScreen = true;
-        System.out.println("Transactions Recorded: " + ledgerInfo); }
 
 
 // Open the file in append mode.
@@ -29,8 +18,6 @@ public class ledgerInfo {
 //Hint: Think about which classes and methods in Java can help write data to files.
 //Consider: How can you ensure that each transaction is saved on a new line in the file?
 
-            public static void writeToCsv() {}
-
 // Open the file in append mode.
 // Write the record and a newline.
 
@@ -41,9 +28,6 @@ public class ledgerInfo {
 //Hint: Use Java's file reading methods to get all lines from the CSV file.
 //Consider: How will you handle situations where the file does not exist yet?
 
-                public static List<String> readFromCsv ()
-
-                { // Read lines from the CSV.
 
 // TODO: Parse each line into a transaction object.
 
@@ -54,8 +38,6 @@ public class ledgerInfo {
 //Hint: Loop through each transaction and print its details.
 //Question: How can you format the output to make it easy to read?
 
-                    public static void showLedger
-                    (List < FinancialTransactionsCLI > transactions)
 
 // Loop through the list.
 // TODO: Format each transaction nicely for display.
@@ -65,13 +47,3 @@ public class ledgerInfo {
 //Hint: Use Java's List.sort() method with a custom comparator.
 //Consider: Should the transactions be sorted from oldest to newest or the other way around?
 //Example Guidance: Think about how you can use Java's compareTo() method for comparing dates.
-
-                    public static void sortTransactionsByDate
-                    (List < FinancialTransactionsCLI > transactions) {
-                    transactions.sort((line1, line2) -> line2.getDate().compareTo(line1.getDate()));
-                }
-                }
-            }
-        }
-    }
-}

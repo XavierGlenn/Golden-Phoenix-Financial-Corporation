@@ -1,6 +1,6 @@
 package com.pluralsight;
 
-//file writer, file reader add, split, convert. if split -> make add .object with stored info <- arraylist?, reference another constructor class.
+/*file writer, file reader add, split, convert. if split -> make add .object with stored info <- arraylist?, reference another constructor class.
 
     public static class depositpaylogistics {
         public void main() {
@@ -21,7 +21,6 @@ package com.pluralsight;
                 this.type = type;
                 this.amount = amount;
             }
-
 
             //Ready... Getters, Setters, Go!
 
