@@ -51,27 +51,3 @@ The app is coded in Java 23 and Maven using a CLI format that demonstrates the a
 ## Feedback and Support Inquiry:
 
 If you have any feedback, please reach out to me at xglenn@appdev.yearup.org
-
-              (                           )
-        ) )( (                           ( ) )( (
-      ( ( ( )  ) )                     ( (   (  ) )(
-     ) )     ,,\\\                     ///,,       ) (
-    (  ((    (\\\\//                     \\////)      )
-     ) )    (-(__//                       \\__)-)     (
-   (((   ((-(__||                         ||__)-))    ) )
-   ) )   ((-(-(_||           ```\__        ||_)-)-))   ((
-  ((   ((-(-(/(/\\        ''; 9.- `      //\)\)-)-))    )
-   )   (-(-(/(/(/\\      '';;;;-\~      //\)\)\)-)-)   (   
-   (   ((-(-(/(/(/\======,:;:;:;:,======/\)\)\)-)-))   )
-    )  '(((-(/(/(/(//////:%%%%%%%:\\\\\\)\)\)\)-)))`  ( (
-   ((   '((-(/(/(/('uuuu:WWWWWWWWW:uuuu`)\)\)\)-))`    )
-    ))  '((-(/(/(/('|||:wwwwwwwww:|||')\)\)\)-))`    ((
-     ((   '((((/(/('uuu:WWWWWWWWW:uuu`)\)\))))`     ))
-        ))   '':::UUUUUU:wwwwwwwww:UUUUUU:::``     ((   
-          ((      '''''''\uuuuuuuu/``````         ))
-           ))            `JJJJJJJJJ`           ((
-           ((            LLLLLLLLLLL         ))
-             ))         ///|||||||\\\       ((
-               ))      (/(/(/(^)\)\)\)       ((
-                ((                           ))
-                  )  ( )( ))( ( ( ) )( ) (()(

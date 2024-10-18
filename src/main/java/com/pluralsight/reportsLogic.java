@@ -11,9 +11,7 @@ import java.util.stream.Collectors;
 
     //I hate this line of code, it's gross to look at. It may work, but I don't like this one either.
 public static List<transaction> generateReportByDateRange(List<Transaction>transactions, LocalDate, startDate, LocalDate, endDate) {
-        return transactions.stream()
-                .filter(t -> t.getDate().isAfter(startDate.minusDays(1)) && t.getDate().isBefore(endDate.plusDays(1)))
-                        .collect(Collectors.toList());
+        return transactions.stream();
     }
 
     //Month-to-date
