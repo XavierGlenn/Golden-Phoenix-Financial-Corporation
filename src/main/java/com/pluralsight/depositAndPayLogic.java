@@ -20,45 +20,83 @@ public class TransactionHandler {
 
         transaction deposit = new transaction(LocalDate.now(), LocalTime.now(), amount);
         return deposit;
+    }
+
+    //Now for deposit logic:
+    public static Transaction addDeposit() {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("Enter description: ");
+        String description = scanner.nextLine();
+
+        System.out.println("Enter vendor's name: ");
+        String vendor = scanner.nextLine();
+
+        double amount = getValidAmount(scanner, "Enter payment amount (positive value): ");
+
+        //now to bring it all together!
+        Transaction payment = new Transaction(LocalDate.now()), LocalTime.now(), -amount);
+        System.out.println("Payment added successfully!");
+
+        return payment;
+
+        //Aaaaaand here's the payment logic! Shocker.
+        public static Transaction addPayment () {
+            Scanner scanner = new Scanner(System.in);
+
+            System.out.println("Enter description: ");
+            String description = scanner.nextLine();
+
+            System.out.println("Enter vendor's name: ");
+            String vendor = scanner.nextLine();
+
+            double amount = getValidAmount(scanner, "Enter payment amount (negative value): ");
+
+            //Let's do this again!
+            Transaction payment = new Transaction(LocalDate.now()), LocalTime.now(), -amount);
+            System.out.println("Payment added successfully!");
+
+            return payment;
         }
 
-        //Now for the validation. How validating.
-    private static double getValidAmount(Scanner scanner, String prompt) {
-        double amount = -1;
-        while (amount <= 0) {
-            System.out.println(prompt);
-            if (scanner.hasNextDouble()) {
-                amount = scanner.nextDouble();
-                if (amount <= 0) {
-                    System.out.println("Amount must be positive."); {
-                     } else {
-                        System.out.println("Invalid input. Please enter a valid number.");
-                        scanner.next();
+        //Now for the validation. How validating. I went from commenting my code out step by step to making jokes! Guess I'm starting to get more confident? Maybe?
+        private static double getValidAmount (Scanner scanner, String prompt){
+            double amount = -1;
+            while (amount <= 0) {
+                System.out.println(prompt);
+                if (scanner.hasNextDouble()) {
+                    amount = scanner.nextDouble();
+                    if (amount <= 0) {
+                        System.out.println("Amount must be positive.");
+                        {
+                        } else{
+                            System.out.println("Invalid input. Please enter a valid number.");
+                            scanner.next();
+                        }
+                    } return amount;
+
+                    private static double getValidAmount (Scanner scanner, String prompt){
+                        double amount = 1;
+                        while (amount =>0){
+                            System.out.println(prompt);
+                            if (scanner.hasNextDouble()) {
+                                amount = scanner.nextDouble();
+                                if (amount <= 0) {
+                                    System.out.println("Amount must be negative.");
+                                    {
+                                    } else{
+                                        System.out.println("Invalid input. Please enter a valid number.");
+                                        scanner.next();
+                                    }
+                                } return amount;
+
+
+                            }
+                        }
                     }
-                } return amount;
+                }
             }
         }
-    }
-}
-
-    public static Transaction addPayment() {
-    Scanner scanner = new Scanner(System.in);
-
-    System.out.println("Enter description: ");
-    String description = scanner.nextLine();
-
-    System.out.println("Enter vendor: ");
-    String vendor = scanner.nextLine();
-
-    double amount = getValidAmount(scanner, "Enter payment amount (positive value): ");
-
-    //now to bring it all together!
-    Transaction payment = new Transaction(LocalDate.now()), LocalTime.now(), -amount);
-    System.out.println("Payment added successfully!");
-
-    return payment;
-    }
-
     /*public static class depositpaylogistics(String date, String time, String description, String vendor, String type, double amount) {
         public void main() {
                 this.date = date;
