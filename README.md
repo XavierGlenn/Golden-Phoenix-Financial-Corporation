@@ -36,7 +36,8 @@ The app is coded in Java 23 and Maven using a CLI format that demonstrates the a
 
 ## Screenshots
 
-![App Screenshot](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
+![App Screenshots](https://tinypic.host/image/screenshot2.2Uu7KE)
+![App Screenshots](https://tinypic.host/image/screenshot.2Uubwa)
 
 
 ## Installation:
