@@ -78,10 +78,10 @@ public class transaction {
                             e.printStackTrace();
                         }
 
-                        Transaction deposit = TransactionHandler.addDeposit();
+                        Transaction deposit = transactionHandler.addDeposit();
                         transaction.add(deposit);
 
-                        Transaction payment = TransactionHandler.addPayment();
+                        Transaction payment = transactionHandler.addPayment();
                         transaction.add(payment);
 
                         csvWriting.writetTransactionsInCSV(transactions, "transactions.csv");

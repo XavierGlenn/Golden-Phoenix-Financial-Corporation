@@ -11,7 +11,7 @@ public class mainCLI {
 
     public void main(String[] args) {
 
-        menuLoop(); //
+        menuLoop();
         displayBanner(); //displays the ASCII banner I made
 
         class displayBanner {

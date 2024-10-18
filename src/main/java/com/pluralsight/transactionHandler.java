@@ -4,7 +4,7 @@ import java.time.LocalDate;
 import java.time.LocalTime;
 import java.util.Scanner;
 
-public class TransactionHandler {
+public class transactionHandler {
 
     //Let's start with the deposit stuff.
     public static transaction addDeposit() {
@@ -97,6 +97,8 @@ public class TransactionHandler {
                 }
             }
         }
+    }
+}
     /*public static class depositpaylogistics(String date, String time, String description, String vendor, String type, double amount) {
         public void main() {
                 this.date = date;
